@@ -20,7 +20,7 @@ export default function FilteredIdeas() {
   const fetchIdeas = async () => {
     setIsLoading(true);
     try {
-      let url = "http://127.0.0.1:8000/ideas";
+      let url = "https://projectideagen-backend.onrender.com/ideas";
       const params = [];
 
       // 3. Add search term to the API request if it exists
@@ -47,7 +47,7 @@ export default function FilteredIdeas() {
 
   const handleUpvote = async (id) => {
     try {
-      const res = await fetch(`http://127.0.0.1:8000/ideas/${id}/upvote`, {
+      const res = await fetch(`https://projectideagen-backend.onrender.com/ideas/${id}/upvote`, {
         method: "POST",
       });
       const updatedIdea = await res.json();
@@ -61,7 +61,7 @@ export default function FilteredIdeas() {
 
   const handleDownvote = async (id) => {
     try {
-      const res = await fetch(`http://127.0.0.1:8000/ideas/${id}/downvote`, {
+      const res = await fetch(`https://projectideagen-backend.onrender.com/ideas/${id}/downvote`, {
         method: "POST",
       });
       const updatedIdea = await res.json();

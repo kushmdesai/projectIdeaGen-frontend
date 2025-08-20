@@ -20,7 +20,7 @@ export default function IdeaPlanner() {
         setPlan(null);
 
         try {
-            const res = await fetch("http://localhost:8000/ai/expand", {
+            const res = await fetch("https://projectideagen-backend.onrender.com/ai/expand", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(idea)

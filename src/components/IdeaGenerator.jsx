@@ -22,7 +22,7 @@ export default function IdeaGenerator() {
     setIdea(null);
 
     try {
-      const res = await fetch("http://localhost:8000/ai/generate", {
+      const res = await fetch("https://projectideagen-backend.onrender.com/ai/generate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt }),
@@ -46,7 +46,7 @@ export default function IdeaGenerator() {
     setSuccess("");
 
     try {
-      const res = await fetch("http://localhost:8000/ideas", {
+      const res = await fetch("https://projectideagen-backend.onrender.com/ideas", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

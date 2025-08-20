@@ -7,7 +7,7 @@ export default function Leaderboard() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch("http://localhost:8000/leaderboard")
+        fetch("https://projectideagen-backend.onrender.com/leaderboard")
         .then((res) => res.json())
         .then((data) => {
             setLeaders(data);

@@ -17,7 +17,7 @@ export default function RandomIdea() {
     const fetchRandomIdea = async () => {
         setIsLoading(true);
         try {
-            const res = await fetch("http://127.0.0.1:8000/ideas/random");
+            const res = await fetch("https://projectideagen-backend.onrender.com/ideas/random");
             const data = await res.json();
             setIdea(data);
         } catch(err) {
@@ -30,7 +30,7 @@ export default function RandomIdea() {
     
     const handleVote = async (id, type) => {
         try {
-            const res = await fetch(`http://127.0.0.1:8000/ideas/${id}/${type}`,
+            const res = await fetch(`https://projectideagen-backend.onrender.com/ideas/${id}/${type}`,
                 { method: "POST" }
             );
             const updatedIdea = await res.json();
